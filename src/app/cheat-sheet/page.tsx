@@ -22,23 +22,23 @@ import {
 const topChanges = [
   {
     title: "One agent across app, CLI, IDE, and cloud",
-    desc: "Use Codex visually in the desktop app, locally in a terminal, inside VS Code-compatible editors, or offload larger tasks to Codex cloud.",
+    desc: "Use Codex wherever your work starts: a workshop idea, a product brief, a customer insight, a spreadsheet, a website, or a rough prototype.",
   },
   {
-    title: "Worktrees and review are first-class",
-    desc: "Run experiments in isolated Git worktrees, inspect diffs, leave inline comments, stage changes, commit, push, and open pull requests.",
+    title: "You can test ideas before committing to them",
+    desc: "Ask Codex to create a first version, compare options, make changes safely, and show you what changed before anything goes live.",
   },
   {
     title: "Skills and plugins turn know-how into infrastructure",
-    desc: "Codex can load focused skills for docs, images, spreadsheets, presentations, GitHub, data analysis, and team-specific workflows.",
+    desc: "Codex can use focused workflows for docs, images, spreadsheets, presentations, research, analytics, and team playbooks.",
   },
   {
     title: "Browser, Chrome, and Computer Use close the verification loop",
-    desc: "Preview localhost, annotate visual issues, operate signed-in Chrome pages, or test desktop apps when files and logs are not enough.",
+    desc: "Codex can look at the thing you are building, click through it, spot obvious issues, and help improve the customer experience.",
   },
   {
     title: "Automations keep Codex working after the prompt",
-    desc: "Schedule recurring checks, thread wakeups, deployment monitors, and skill-driven follow-up loops.",
+    desc: "Schedule follow-ups like checking a launch page, watching a report, preparing a weekly brief, or reminding you when work needs attention.",
   },
 ];
 
@@ -150,11 +150,15 @@ export default function CheatSheetPage() {
         <div className="rounded-lg border bg-card p-5">
           <p className="leading-relaxed text-muted-foreground">
             <strong className="text-foreground">Codex</strong> is OpenAI&apos;s
-            coding agent for software development. It can write code, explain
-            unfamiliar codebases, review diffs, debug failures, run repeatable
-            development tasks, and help you move from idea to shipped prototype.
-            In this workshop, treat it as an agentic teammate: powerful,
-            fast, and still accountable to your judgment.
+            AI teammate for turning ideas into working digital products and
+            business tools. You describe the goal in plain English: the
+            customer, the problem, the workflow, the data, and what success
+            should look like. Codex can then help create a prototype, improve a
+            website, build an internal tool, draft a dashboard, generate
+            assets, or automate a repetitive task. For MBAs, product leaders,
+            marketers, and operators, the point is not to become a programmer;
+            it is to learn how to express ideas clearly enough that software
+            can be created, tested, and improved much faster.
           </p>
         </div>
       </SectionBlock>
@@ -341,7 +345,7 @@ export default function CheatSheetPage() {
             <ul className="space-y-2 text-sm leading-relaxed text-amber-900">
               <li>Keep secrets in environment variables, never in committed code.</li>
               <li>Use AGENTS.md for durable repo rules and review expectations.</li>
-              <li>Review diffs, browser output, and generated artifacts before shipping.</li>
+              <li>Review the prototype, page, report, or artifact before sharing it.</li>
               <li>Use worktrees and narrow approvals when the task is risky.</li>
               <li>Remember: the user is accountable for what the agent does.</li>
             </ul>

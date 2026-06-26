@@ -59,9 +59,9 @@ export const CONCEPTS: Concept[] = [
   {
     term: "Codex",
     definition:
-      "OpenAI's coding agent for software development. It can read a project, edit files, run commands, review diffs, debug failures, and help ship working software.",
+      "OpenAI's AI teammate for turning plain-English ideas into working prototypes, websites, dashboards, internal tools, automations, and polished business artifacts.",
     analogy:
-      "Like pairing with an engineer who can use the repo, terminal, browser, and Git workflow with you.",
+      "Like having a builder beside you who can translate a clear business idea into something people can actually try.",
     icon: "Terminal",
   },
   {
