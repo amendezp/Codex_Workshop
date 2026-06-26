@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <rect width="512" height="512" rx="108" fill="#8C1515"/>
+  <g transform="translate(256,256)" fill="#FFF5EB">
+    <!-- Center circle -->
+    <circle r="30" />
+    <!-- 13 organic rays of varying lengths, Codex-style starburst -->
+    <!-- Top -->
+    <path d="M-10,-28 C-8,-65 -4,-110 0,-145 C4,-110 8,-65 10,-28Z"/>
+    <!-- Top-right 1 -->
+    <path d="M-10,-28 C-8,-65 -4,-110 0,-130 C4,-100 8,-60 10,-28Z" transform="rotate(28)"/>
+    <!-- Right-upper -->
+    <path d="M-9,-28 C-7,-60 -3,-100 0,-140 C3,-100 7,-60 9,-28Z" transform="rotate(58)"/>
+    <!-- Right -->
+    <path d="M-10,-28 C-8,-62 -4,-105 0,-135 C4,-105 8,-62 10,-28Z" transform="rotate(90)"/>
+    <!-- Right-lower -->
+    <path d="M-9,-28 C-7,-58 -3,-95 0,-125 C3,-95 7,-58 9,-28Z" transform="rotate(118)"/>
+    <!-- Bottom-right -->
+    <path d="M-10,-28 C-8,-65 -4,-108 0,-142 C4,-108 8,-65 10,-28Z" transform="rotate(148)"/>
+    <!-- Bottom -->
+    <path d="M-10,-28 C-8,-60 -4,-100 0,-132 C4,-100 8,-60 10,-28Z" transform="rotate(180)"/>
+    <!-- Bottom-left -->
+    <path d="M-9,-28 C-7,-62 -3,-105 0,-138 C3,-105 7,-62 9,-28Z" transform="rotate(208)"/>
+    <!-- Left-lower -->
+    <path d="M-10,-28 C-8,-58 -4,-98 0,-128 C4,-98 8,-58 10,-28Z" transform="rotate(238)"/>
+    <!-- Left -->
+    <path d="M-10,-28 C-8,-64 -4,-108 0,-144 C4,-108 8,-64 10,-28Z" transform="rotate(270)"/>
+    <!-- Left-upper -->
+    <path d="M-9,-28 C-7,-60 -3,-100 0,-130 C3,-100 7,-60 9,-28Z" transform="rotate(298)"/>
+    <!-- Top-left 1 -->
+    <path d="M-10,-28 C-8,-62 -4,-104 0,-136 C4,-104 8,-62 10,-28Z" transform="rotate(330)"/>
+  </g>
+</svg>

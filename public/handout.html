@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Codex Workshop - Handout</title>
+  <style>
+    :root {
+      --bg: #f8f7f4;
+      --ink: #1f1f1f;
+      --muted: #666;
+      --card: #fff;
+      --red: #8c1515;
+      --green: #175e54;
+      --blue: #0b74c8;
+      --border: #ded8cf;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.45;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 48px;
+    }
+
+    header {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 24px;
+      border-bottom: 2px solid var(--red);
+      padding-bottom: 18px;
+    }
+
+    h1, h2, h3 { margin: 0; line-height: 1.1; }
+    h1 { font-size: 40px; letter-spacing: -0.02em; }
+    h2 { margin-top: 26px; margin-bottom: 10px; font-size: 22px; }
+    h3 { margin-bottom: 6px; font-size: 16px; }
+    p { margin: 0; }
+    a { color: var(--red); }
+
+    .eyebrow {
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .subtitle {
+      max-width: 760px;
+      color: var(--muted);
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: var(--card);
+      padding: 16px;
+      break-inside: avoid;
+    }
+
+    .card strong { color: var(--ink); }
+    .small { color: var(--muted); font-size: 13px; }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      background: #f1e8e6;
+      color: var(--red);
+      font-size: 12px;
+      font-weight: 700;
+      padding: 4px 9px;
+    }
+
+    ul {
+      margin: 8px 0 0;
+      padding-left: 18px;
+    }
+
+    li { margin: 4px 0; }
+    code {
+      border-radius: 4px;
+      background: #f0eee9;
+      padding: 1px 5px;
+      font-family: "SFMono-Regular", Consolas, monospace;
+      font-size: 0.92em;
+    }
+
+    .tracks {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .track-number {
+      display: inline-grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--red);
+      color: white;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .links {
+      display: grid;
+      gap: 8px;
+      font-size: 14px;
+    }
+
+    @media print {
+      body { background: white; }
+      main { padding: 18px; }
+      a { color: var(--ink); text-decoration: none; }
+    }
+
+    @media (max-width: 760px) {
+      .grid, .tracks { grid-template-columns: 1fr; }
+      h1 { font-size: 32px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">AI@GSB Hands-on Workshop</div>
+      <h1>Codex in 5 Minutes</h1>
+      <p class="subtitle">
+        Use OpenAI Codex to plan, build, review, verify, automate, and ship real
+        prototypes while keeping human judgment in charge.
+      </p>
+    </header>
+
+    <section class="grid">
+      <div class="card">
+        <span class="pill">What it is</span>
+        <h2>Codex</h2>
+        <p>
+          OpenAI's coding agent for software development. It can read projects,
+          write code, run commands, review diffs, debug failures, create
+          artifacts, and help move ideas into shipped prototypes.
+        </p>
+      </div>
+
+      <div class="card">
+        <span class="pill">Current default</span>
+        <h2>Model guidance</h2>
+        <p>
+          OpenAI's current docs recommend <strong>gpt-5.5</strong> for complex
+          coding, tool-heavy agents, grounded assistants, research, and
+          knowledge work. Start with medium reasoning and tune from there.
+        </p>
+      </div>
+    </section>
+
+    <h2>Top Codex Features</h2>
+    <section class="grid">
+      <div class="card">
+        <h3>App, CLI, IDE, and cloud</h3>
+        <p class="small">Use the same agent visually, in a terminal, in your editor, or remotely.</p>
+      </div>
+      <div class="card">
+        <h3>Worktrees and review</h3>
+        <p class="small">Isolate experiments, inspect diffs, leave comments, stage, commit, push, and open PRs.</p>
+      </div>
+      <div class="card">
+        <h3>Skills and plugins</h3>
+        <p class="small">Load reusable workflows for docs, images, spreadsheets, decks, GitHub, analytics, and team playbooks.</p>
+      </div>
+      <div class="card">
+        <h3>Browser, Chrome, Computer Use</h3>
+        <p class="small">Preview localhost, annotate UI bugs, operate signed-in sites, and test desktop apps when needed.</p>
+      </div>
+      <div class="card">
+        <h3>Automations</h3>
+        <p class="small">Schedule recurring checks, thread wakeups, deployment monitors, and follow-up loops.</p>
+      </div>
+      <div class="card">
+        <h3>AGENTS.md, MCP, hooks</h3>
+        <p class="small">Give durable repo guidance, connect trusted tools, and enforce lifecycle checks.</p>
+      </div>
+    </section>
+
+    <h2>Workshop Tracks</h2>
+    <section class="tracks">
+      <div class="card">
+        <div class="track-number">1</div>
+        <h3>First Codex Build</h3>
+        <p class="small">Create a tiny interactive visualization, open it locally, and iterate once.</p>
+      </div>
+      <div class="card">
+        <div class="track-number">2</div>
+        <h3>AI Interview Coach</h3>
+        <p class="small">Build a Next.js app with the OpenAI API, push to GitHub, and deploy on Vercel.</p>
+      </div>
+      <div class="card">
+        <div class="track-number">3</div>
+        <h3>Browser, Docs & Skills</h3>
+        <p class="small">Use AGENTS.md, Browser or Chrome, plugins, and skills for documents and research.</p>
+      </div>
+    </section>
+
+    <h2>Prompting Pattern</h2>
+    <section class="card">
+      <ul>
+        <li><strong>Outcome:</strong> what should exist when Codex is done?</li>
+        <li><strong>Context:</strong> what files, users, constraints, or examples matter?</li>
+        <li><strong>Guardrails:</strong> what should Codex avoid changing or exposing?</li>
+        <li><strong>Verification:</strong> what tests, build, screenshots, or artifacts prove success?</li>
+        <li><strong>Handoff:</strong> what summary, commit, PR, or next action do you need?</li>
+      </ul>
+    </section>
+
+    <h2>Safety Checklist</h2>
+    <section class="card">
+      <ul>
+        <li>Keep secrets in environment variables, never in committed code.</li>
+        <li>Use <code>AGENTS.md</code> for durable repo rules and review expectations.</li>
+        <li>Use worktrees and narrow approvals for risky or broad changes.</li>
+        <li>Review diffs, rendered pages, generated artifacts, and sources before shipping.</li>
+        <li>You are accountable for what the agent does on your behalf.</li>
+      </ul>
+    </section>
+
+    <h2>Official Links</h2>
+    <section class="card links">
+      <a href="https://developers.openai.com/codex/overview">Codex overview</a>
+      <a href="https://developers.openai.com/codex/app/features">Codex app features</a>
+      <a href="https://developers.openai.com/codex/skills">Agent skills</a>
+      <a href="https://developers.openai.com/api/docs/guides/latest-model">Latest OpenAI model guidance</a>
+    </section>
+  </main>
+</body>
+</html>
