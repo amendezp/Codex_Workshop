@@ -35,9 +35,9 @@ function VoiceIntro() {
 
 const steps: TrackStep[] = [
   {
-    title: "Make sure Auto Accept is enabled",
+    title: 'Use "Approve for me" for this build',
     description:
-      "This feature involves multiple file changes across your codebase. Auto mode lets Codex work through them while still asking when an action leaves the safe boundary.",
+      'This feature involves multiple file changes across your codebase. "Approve for me" lets Codex work through routine safe actions while still pausing for actions detected as potentially unsafe.',
   },
   {
     title: "Send this prompt to Codex",

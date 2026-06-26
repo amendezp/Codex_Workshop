@@ -19,8 +19,8 @@ const elements = [
   },
   {
     id: "permissions",
-    label: "Permission mode",
-    desc: 'Controls how much autonomy Codex has. Start in Auto or Read-only, then use Full Access only for trusted tasks.',
+    label: "Approval mode",
+    desc: 'Controls when Codex pauses before taking actions. Use "Approve for me" for most workshop tasks, or "Ask for approval" when you want more checkpoints.',
     icon: Shield,
     position: "bottom-left",
   },
@@ -79,7 +79,7 @@ export function InterfaceGuide() {
             <span className="text-xs text-white/40">+</span>
             <span className="flex items-center gap-1 rounded-md bg-white/5 px-2 py-1 text-xs text-white/60">
               <Shield className="h-3 w-3" />
-              Auto
+              Approve for me
               <span className="text-white/30">&#x25BE;</span>
             </span>
           </div>

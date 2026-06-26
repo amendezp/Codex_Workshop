@@ -44,22 +44,16 @@ const topChanges = [
 
 const permissionModes = [
   {
-    name: "Read-only",
-    badge: "Consult",
-    desc: "Codex can inspect and explain but should not modify files or run side-effecting commands without a deliberate mode change.",
+    name: "Ask for approval",
+    badge: "More control",
+    desc: "Codex always asks before editing external files or using the internet. Choose this when you want more checkpoints while learning or reviewing sensitive work.",
     color: "bg-blue-100 text-blue-800",
   },
   {
-    name: "Auto",
-    badge: "Default",
-    desc: "Codex can edit and run commands inside the workspace, while still asking for riskier actions such as network or out-of-scope filesystem access.",
+    name: "Approve for me",
+    badge: "Workshop default",
+    desc: "Codex only pauses for actions detected as potentially unsafe. This keeps routine work moving while preserving a safety checkpoint.",
     color: "bg-emerald-100 text-emerald-800",
-  },
-  {
-    name: "Full Access",
-    badge: "Trusted only",
-    desc: "Codex can work across the machine and network with fewer interruptions. Use it sparingly, and only when you trust the repo and task.",
-    color: "bg-amber-100 text-amber-800",
   },
 ];
 
@@ -192,8 +186,8 @@ export default function CheatSheetPage() {
       </SectionBlock>
 
       <SectionBlock
-        title="Permission Modes"
-        subtitle="Choose how much freedom Codex has"
+        title="Approval Modes"
+        subtitle="Match the dropdown in the Codex composer"
       >
         <div className="space-y-3">
           {permissionModes.map((mode) => (
@@ -346,7 +340,10 @@ export default function CheatSheetPage() {
               <li>Keep secrets in environment variables, never in committed code.</li>
               <li>Use AGENTS.md for durable repo rules and review expectations.</li>
               <li>Review the prototype, page, report, or artifact before sharing it.</li>
-              <li>Use worktrees and narrow approvals when the task is risky.</li>
+              <li>
+                Use worktrees and switch to Ask for approval when the task is
+                risky.
+              </li>
               <li>Remember: the user is accountable for what the agent does.</li>
             </ul>
           </div>

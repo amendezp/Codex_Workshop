@@ -2,9 +2,6 @@
 
 import {
   Check,
-  Shield,
-  ShieldOff,
-  Pencil,
   Lightbulb,
   GitBranch,
   Lock,
@@ -17,71 +14,37 @@ import {
 } from "lucide-react";
 
 /**
- * Illustration: Permissions dropdown with "Plan mode" highlighted.
+ * Illustration: Plan-first workflow for broad tasks.
  */
 export function PlanModeDropdownIllustration() {
+  const steps = [
+    "Inspect the project",
+    "Propose a plan",
+    "Wait for your approval",
+    "Build and verify",
+  ];
+
   return (
-    <div className="inline-flex flex-col gap-2 rounded-xl bg-[#2a2a2a] p-3">
-      {/* Bottom bar hint */}
-      <div className="flex items-center gap-2">
-        <span className="inline-flex items-center gap-1.5 rounded-md bg-[#383838] px-3 py-1.5 text-xs text-white/80">
-          <Lightbulb className="h-3.5 w-3.5 text-white/50" />
-          Plan mode
-          <svg
-            className="h-3 w-3 text-white/40"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
-            strokeWidth={2}
-          >
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              d="M19 9l-7 7-7-7"
-            />
-          </svg>
-        </span>
+    <div className="inline-flex w-80 flex-col gap-3 rounded-xl bg-[#2a2a2a] p-4">
+      <div className="inline-flex w-fit items-center gap-1.5 rounded-md bg-[#383838] px-3 py-1.5 text-xs text-white/80">
+        <Lightbulb className="h-3.5 w-3.5 text-yellow-300" />
+        Plan first
       </div>
-      {/* Dropdown */}
-      <div className="rounded-lg bg-[#333] py-1.5 shadow-lg">
-        <div className="flex items-center gap-3 px-3 py-2 text-xs text-white/60">
-          <Shield className="h-3.5 w-3.5" />
-          <div>
-            <p className="text-white/70">Read-only</p>
-            <p className="text-[10px] text-white/40">
-              Inspect before changing
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 text-xs text-white/60">
-          <Pencil className="h-3.5 w-3.5" />
-          <div>
-            <p className="text-white/70">Auto</p>
-            <p className="text-[10px] text-white/40">
-              Edit safely in the workspace
-            </p>
-          </div>
-        </div>
-        <div className="flex items-center justify-between gap-3 bg-white/5 px-3 py-2 text-xs text-white">
-          <span className="flex items-center gap-3">
-            <Lightbulb className="h-3.5 w-3.5" />
-            <div>
-              <p>Plan mode</p>
-              <p className="text-[10px] text-white/40">
-                Create a plan before making changes
-              </p>
+
+      <div className="rounded-lg bg-[#333] p-3 shadow-lg">
+        <p className="mb-3 text-xs font-medium text-white">
+          Ask Codex to slow down before it edits
+        </p>
+        <div className="space-y-2">
+          {steps.map((step, index) => (
+            <div key={step} className="flex items-center gap-2 text-xs">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 text-[10px] text-white/70">
+                {index + 1}
+              </span>
+              <span className="flex-1 text-white/70">{step}</span>
+              {index < 2 && <Check className="h-3.5 w-3.5 text-blue-400" />}
             </div>
-          </span>
-          <Check className="h-3.5 w-3.5 text-blue-400" />
-        </div>
-        <div className="flex items-center gap-3 px-3 py-2 text-xs text-white/60">
-          <ShieldOff className="h-3.5 w-3.5" />
-          <div>
-            <p className="text-white/70">Full Access</p>
-            <p className="text-[10px] text-white/40">
-              Trusted tasks only
-            </p>
-          </div>
+          ))}
         </div>
       </div>
     </div>
