@@ -163,7 +163,7 @@ export function TrackSection({
                 >
                   {isComplete ? <Check className="h-4 w-4" /> : i + 1}
                 </div>
-                <div className="flex-1">
+                <div className="min-w-0 flex-1">
                   <p
                     className={`font-medium ${
                       isComplete

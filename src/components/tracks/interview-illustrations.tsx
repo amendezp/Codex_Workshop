@@ -2,11 +2,18 @@
 
 import {
   Check,
-  Lightbulb,
+  Chrome,
+  File,
+  FileText,
+  Goal,
   GitBranch,
   Lock,
   Globe,
+  LayoutTemplate,
+  ListTodo,
   Plus,
+  Presentation,
+  FileSpreadsheet,
   Key,
   Copy,
   EyeOff,
@@ -14,38 +21,116 @@ import {
 } from "lucide-react";
 
 /**
- * Illustration: Plan-first workflow for broad tasks.
+ * Illustration: Codex Add menu with Plan mode highlighted.
  */
 export function PlanModeDropdownIllustration() {
-  const steps = [
-    "Inspect the project",
-    "Propose a plan",
-    "Wait for your approval",
-    "Build and verify",
+  const addOptions = [
+    {
+      label: "Files and folders",
+      description: "",
+      icon: File,
+      selected: false,
+    },
+    {
+      label: "Attach Google Chrome",
+      description: "",
+      icon: Chrome,
+      selected: false,
+    },
+    {
+      label: "Goal",
+      description: "Set a goal that Codex will keep working towards",
+      icon: Goal,
+      selected: false,
+    },
+    {
+      label: "Plan mode",
+      description: "Turn plan mode on",
+      icon: ListTodo,
+      selected: true,
+    },
+  ];
+
+  const pluginOptions = [
+    {
+      label: "Documents",
+      description: "Create and edit document artifacts",
+      icon: FileText,
+      color: "text-blue-400",
+    },
+    {
+      label: "PDF",
+      description: "Read, create, and verify PDF files",
+      icon: FileText,
+      color: "text-red-400",
+    },
+    {
+      label: "Spreadsheets",
+      description: "Create and edit spreadsheet files",
+      icon: FileSpreadsheet,
+      color: "text-green-400",
+    },
+    {
+      label: "Presentations",
+      description: "Create and edit presentations",
+      icon: Presentation,
+      color: "text-amber-400",
+    },
+    {
+      label: "Template Creator",
+      description: "Create or update personal artifact templates",
+      icon: LayoutTemplate,
+      color: "text-sky-400",
+    },
   ];
 
   return (
-    <div className="inline-flex w-80 flex-col gap-3 rounded-xl bg-[#2a2a2a] p-4">
-      <div className="inline-flex w-fit items-center gap-1.5 rounded-md bg-[#383838] px-3 py-1.5 text-xs text-white/80">
-        <Lightbulb className="h-3.5 w-3.5 text-yellow-300" />
-        Plan first
+    <div className="w-full max-w-2xl overflow-hidden rounded-xl border border-white/10 bg-[#2b2b2b] shadow-2xl">
+      <div className="px-2.5 py-1.5 text-sm text-white/45">
+        Add
       </div>
-
-      <div className="rounded-lg bg-[#333] p-3 shadow-lg">
-        <p className="mb-3 text-xs font-medium text-white">
-          Ask Codex to slow down before it edits
-        </p>
-        <div className="space-y-2">
-          {steps.map((step, index) => (
-            <div key={step} className="flex items-center gap-2 text-xs">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-white/10 text-[10px] text-white/70">
-                {index + 1}
-              </span>
-              <span className="flex-1 text-white/70">{step}</span>
-              {index < 2 && <Check className="h-3.5 w-3.5 text-blue-400" />}
+      <div className="space-y-0.5 px-1 pb-2">
+        {addOptions.map((option) => (
+          <div
+            key={option.label}
+            className={`flex min-h-7 items-center gap-2 rounded-md px-2 py-1 text-sm ${
+              option.selected ? "bg-white/10 text-white" : "text-white/85"
+            }`}
+          >
+            <option.icon
+              className={`h-3.5 w-3.5 shrink-0 ${
+                option.selected ? "text-white/90" : "text-white/65"
+              }`}
+            />
+            <div className="flex min-w-0 items-baseline gap-2">
+              <span className="shrink-0">{option.label}</span>
+              {option.description && (
+                <span className="truncate text-white/38">
+                  {option.description}
+                </span>
+              )}
             </div>
-          ))}
-        </div>
+            {option.selected && (
+              <Check className="ml-auto h-3.5 w-3.5 shrink-0 text-blue-300" />
+            )}
+          </div>
+        ))}
+
+        <div className="px-2 pt-2 pb-1 text-xs text-white/38">Plugins</div>
+        {pluginOptions.map((option) => (
+          <div
+            key={option.label}
+            className="flex min-h-7 items-center gap-2 rounded-md px-2 py-1 text-sm text-white/75"
+          >
+            <option.icon className={`h-3.5 w-3.5 shrink-0 ${option.color}`} />
+            <div className="flex min-w-0 items-baseline gap-2">
+              <span className="shrink-0">{option.label}</span>
+              <span className="truncate text-white/35">
+                {option.description}
+              </span>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

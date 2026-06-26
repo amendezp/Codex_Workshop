@@ -75,7 +75,7 @@ const steps: TrackStep[] = [
   {
     title: "Ask Codex to plan before coding",
     description:
-      'In the Codex app or IDE, use Chat/Plan behavior for a broad task. In the CLI, prompt explicitly: "Inspect first, write a plan, and wait for approval before editing."',
+      'In the Codex app, click the + Add menu and choose Plan mode before sending a broad task. In the CLI, prompt explicitly: "Inspect first, write a plan, and wait for approval before editing."',
     illustration: <PlanModeDropdownIllustration />,
   },
   {
